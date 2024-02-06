@@ -1,0 +1,15 @@
+1.Use Java 1.8 version and intellij or spring Tool Suite(STS) as IDE
+2.Update DB username and password in application.properties
+3.If you are running for the first time in application.properties give spring.jpa.hibernate.ddl-auto as create and revert it back to update
+4.Before running you have to Insert Roles and Admin User to the table respectively
+5.While adding scores to a new match always start with second innings i.e first give values to second team.
+6.URL: http://localhost:8080/cricket/
+7.Before Login we need to inert roles and users like below
+INSERT INTO role (name) VALUES
+ ('ADMIN'),
+ ('USER');
+INSERT INTO user (name, email, password, role_id) VALUES
+ ('Admin User', 'admin@example.com', 'admin123', 1),
+ ('Regular User', 'user@example.com', 'user123', 2);
+
+

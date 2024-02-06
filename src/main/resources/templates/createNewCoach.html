@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>User Dashboard</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body>
+
+<header class="bg-light py-3">
+	<div class="container">
+		<div th:replace="common/header.html :: header"></div>
+	</div>
+</header>
+
+<main class="container py-5">
+	<div class="row justify-content-center">
+		<div class="col-md-6">
+			<h1 class="text-center mb-4">Create New Coach</h1>
+			<form th:action="@{/createCoach}" method="post">
+				<div class="mb-3">
+					<label for="name" class="form-label">Coach Name</label>
+					<input type="text" class="form-control" id="name" name="name" required>
+				</div>
+
+				<div class="mb-3">
+					<label for="email" class="form-label">Email</label>
+					<input type="email" class="form-control" id="email" name="email" required>
+				</div>
+
+				<div class="mb-3">
+					<label for="phone" class="form-label">Phone</label>
+					<input type="tel" class="form-control" id="phone" name="phone" required>
+				</div>
+
+				<div class="d-grid gap-2">
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-NUFYmZOxMx/i3Cq3otzgd2JyV7QbF2sB6c+1sIbT6C8xigxLZ6oIu6+SOlJV7X9J" crossorigin="anonymous"></script>
+
+</body>
+</html>
